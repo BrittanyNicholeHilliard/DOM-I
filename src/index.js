@@ -39,4 +39,66 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
+//images
+const logoImg = document.querySelector('#logo-img');
+logoImg.src = siteContent.images['logo-img'];
+
+const  ctaImg = document.querySelector('#cta-img');
+ctaImg.src = siteContent.images['cta-img'];
+
+const midImg = document.querySelector('#middle-img');
+midImg.src = siteContent.images['accent-img'];
+
+
+//footer
+
+const footerLink = document.querySelector('footer a'); 
+footerLink.textContent = siteContent.footer.copyright;
+footerLink.classList.add('bold');
+
+// contact
+const contactHead = document.querySelector('section.contact')
+//contactHead.children[0].textContent = siteContent.contact['contact-h4'];
+contactHead.querySelector('h4').textContent = siteContent.contact['contact-h4'];
+
+contactHead.children[1].textContent = siteContent.contact.address;
+contactHead.children[2].textContent = siteContent.contact.phone;
+contactHead.children[3].textContent = siteContent.contact.email;
+
+// middle content
+
+const topContent = document.querySelector('.top-content');
+topContent.children[0].children[0].textContent = siteContent['main-content']['features-h4'];
+topContent.children[0].children[1].textContent = siteContent['main-content']['features-content'];
+topContent.children[1].children[0].textContent = siteContent['main-content']['about-h4'];
+topContent.children[1].children[1].textContent = siteContent['main-content']['about-content'];
+
+
+const bottomContent = document.querySelector('.bottom-content');
+bottomContent.children[0].children[0].textContent = siteContent['main-content']['services-h4'];
+bottomContent.children[0].children[1].textContent = siteContent['main-content']['services-content'];
+bottomContent.children[1].children[0].textContent = siteContent['main-content']['product-h4'];
+bottomContent.children[1].children[1].textContent = siteContent['main-content']['product-content'];
+bottomContent.children[2].children[0].textContent = siteContent['main-content']['vision-h4'];
+bottomContent.children[2].children[1].textContent = siteContent['main-content']['vision-content'];
+
+//cta
+
+document.querySelector('.cta .cta-text h1').textContent = siteContent.cta.h1;
+document.querySelector('.cta .cta-text button').textContent = siteContent.cta.button;
+
+
+//nav
+
+document.querySelector('header nav').children[0].textContent = siteContent.nav['nav-item-1'];
+document.querySelector('header nav').children[1].textContent = siteContent.nav['nav-item-2'];
+document.querySelector('header nav').children[2].textContent = siteContent.nav['nav-item-3'];
+document.querySelector('header nav').children[3].textContent = siteContent.nav['nav-item-4'];
+document.querySelector('header nav').children[4].textContent = siteContent.nav['nav-item-5'];
+document.querySelector('header nav').children[5].textContent = siteContent.nav['nav-item-6'];
+
+const navLinks = document.querySelectorAll('nav a')
+navLinks.forEach(link => link.classList.add('italic'));
+
+
 console.log('project wired!')
